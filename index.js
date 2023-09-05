@@ -52,7 +52,7 @@ class CapitaliskAuthProvider {
       throw new Error(
         `The balance of the account with wallet address ${
           walletAddress
-        } did meed the minimum requirement of ${
+        } did meet the minimum requirement of ${
           this.minAccountBalance
         } ${
           this.networkSymbol.toUpperCase()
