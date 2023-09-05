@@ -6,7 +6,8 @@ A modular back end toolkit for easily implementing log in using any Capitalisk/L
 This project provides back end Node.js components to allow you to easily extend your app or website to support authentication (log in) via a Capitalisk-based blockchain.
 It's an alternative to the standard email-based authentication which is currently supported by most websites and it saves you from having to do the work of setting up a registration page and handling the whole sign up and email verification flow.
 
-This project is intended to be used with `capitalisk-auth-client` (https://github.com/Capitalisk/capitalisk-auth-client) on the client side (Node.js) to complete the authentication flow. Aside from that, it is highly versatile and can work with any transport protocol (I.e. HTTP/HTTPS and WebSockets) and any API framework on the back end (I.e. ExpressJS, Koa... or without any framework).
+This project is intended to be used with `capitalisk-auth-client` (https://github.com/Capitalisk/capitalisk-auth-client) on the front end to initiate the authentication flow.
+This library is highly versatile and can work with any transport protocol (I.e. HTTP/HTTPS and WebSockets) and any API framework on the back end (I.e. ExpressJS, Koa... or without any framework).
 
 ## How does it work?
 
