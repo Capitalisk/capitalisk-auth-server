@@ -1,0 +1,25 @@
+{
+  "name": "capitalisk-auth-server",
+  "version": "1.0.0",
+  "description": "A modular back end toolkit for easily implementing log in using any Capitalisk/LDPoS blockchain.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Capitalisk/capitalisk-auth-server.git"
+  },
+  "keywords": [
+    "capitalisk",
+    "blockchain",
+    "auth",
+    "server"
+  ],
+  "author": "Jonathan Gros-Dubois",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Capitalisk/capitalisk-auth-server/issues"
+  },
+  "homepage": "https://github.com/Capitalisk/capitalisk-auth-server#readme"
+}
