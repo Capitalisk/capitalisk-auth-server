@@ -18,7 +18,7 @@ See https://github.com/Capitalisk/capitalisk-auth-client#how-does-it-work
 ### Include library
 
 ```js
-const { CapitaliskAuthProvider, convertWalletAddressToId } = require('capitalisk-auth-server'_;
+const { CapitaliskAuthProvider, convertWalletAddressToId } = require('capitalisk-auth-server');
 ```
 
 Or with import syntax:
