@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Capitalisk/capitalisk-auth-server/issues"
   },
-  "homepage": "https://github.com/Capitalisk/capitalisk-auth-server#readme"
+  "homepage": "https://github.com/Capitalisk/capitalisk-auth-server#readme",
+  "dependencies": {
+    "ldpos-client": "^11.4.1"
+  }
 }
