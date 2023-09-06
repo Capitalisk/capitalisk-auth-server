@@ -70,13 +70,18 @@ class CapitaliskAuthProvider {
       accountPublicKey = account.multisigPublicKey;
     }
     if (accountKeyIndex == null || accountPublicKey == null) {
-      // Alternative authentication for accounts which have not yet been initialized.
-      let derivedWalletAddress = await ldpos.computeWalletAddressFromPassphrase(this.networkSymbol, passphrase);
-      if (type === 'sig' && derivedWalletAddress === walletAddress) {
-        return {
-          walletAddress,
-          accountBalance
-        };
+      if (type === 'sig') {
+        // Alternative authentication for accounts which have not yet been initialized.
+        let derivedWalletAddress = await ldpos.computeWalletAddressFromPassphrase(this.networkSymbol, passphrase);
+        if (derivedWalletAddress === walletAddress) {
+          return {
+            walletAddress,
+            accountBalance
+          };
+        }
+        throw new Error(
+          'The specified passphrase did not correspond to the wallet address of the account'
+        );
       }
       throw new Error(`Authentication via ${type} key was not supported on the specified account`);
     }
