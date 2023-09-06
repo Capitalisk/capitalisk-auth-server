@@ -70,6 +70,14 @@ class CapitaliskAuthProvider {
       accountPublicKey = account.multisigPublicKey;
     }
     if (accountKeyIndex == null || accountPublicKey == null) {
+      // Alternative authentication for accounts which have not yet been initialized.
+      let derivedWalletAddress = await ldpos.computeWalletAddressFromPassphrase(passphrase);
+      if (type === 'sig' && derivedWalletAddress === walletAddress) {
+        return {
+          walletAddress,
+          accountBalance
+        };
+      }
       throw new Error(`Authentication via ${type} key was not supported on the specified account`);
     }
 
