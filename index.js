@@ -71,7 +71,7 @@ class CapitaliskAuthProvider {
     }
     if (accountKeyIndex == null || accountPublicKey == null) {
       // Alternative authentication for accounts which have not yet been initialized.
-      let derivedWalletAddress = await ldpos.computeWalletAddressFromPassphrase(passphrase);
+      let derivedWalletAddress = await ldpos.computeWalletAddressFromPassphrase(this.networkSymbol, passphrase);
       if (type === 'sig' && derivedWalletAddress === walletAddress) {
         return {
           walletAddress,
