@@ -1,6 +1,6 @@
 {
   "name": "capitalisk-auth-server",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A modular back end toolkit for easily implementing log in using any Capitalisk/LDPoS blockchain.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/Capitalisk/capitalisk-auth-server#readme",
   "dependencies": {
-    "ldpos-client": "^11.4.1"
+    "ldpos-client": "^11.4.2"
   }
 }
