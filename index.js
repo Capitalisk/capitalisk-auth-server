@@ -45,6 +45,9 @@ class CapitaliskAuthProvider {
     try {
       account = await this.ldposClient.getAccount(walletAddress);
     } catch (error) {
+      if (error.name === 'BadConnectionError' || error.name === 'TimeoutError') {
+        throw new Error('Failed to load the account because of a connection error');
+      }
       throw new Error(`The account with wallet address ${walletAddress} was not initialized with any tokens`);
     }
     let accountBalance = Number(BigInt(account.balance) * 100n / this.currencyUnitSize) / 100;

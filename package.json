@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/Capitalisk/capitalisk-auth-server#readme",
   "dependencies": {
-    "ldpos-client": "^11.4.2"
+    "ldpos-client": "^11.5.2"
   }
 }
