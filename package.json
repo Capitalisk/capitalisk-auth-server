@@ -1,6 +1,6 @@
 {
   "name": "capitalisk-auth-server",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A modular back end toolkit for easily implementing log in using any Capitalisk/LDPoS blockchain.",
   "main": "index.js",
   "scripts": {
