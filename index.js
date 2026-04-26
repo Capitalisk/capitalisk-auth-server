@@ -16,6 +16,14 @@ class CapitaliskAuthProvider {
       currencyUnitSize
     } = options || {};
 
+    let extraOptions = {};
+    if (options?.connectTimeout != null) {
+      extraOptions.connectTimeout = options.connectTimeout;
+    }
+    if (options?.ackTimeout != null) {
+      extraOptions.ackTimeout = options.ackTimeout;
+    }
+
     this.minAccountBalance = minAccountBalance;
     this.currencyUnitSize = BigInt(
       currencyUnitSize == null ? DEFAULT_CURRENCY_UNIT_SIZE : currencyUnitSize
@@ -27,7 +35,8 @@ class CapitaliskAuthProvider {
       port,
       networkSymbol,
       chainModuleName,
-      secure
+      secure,
+      ...extraOptions
     });
   }
 
